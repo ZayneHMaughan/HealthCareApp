@@ -1,0 +1,578 @@
+[
+  {
+    "id": "cp_classic",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Chest pain"
+    ]
+  },
+  {
+    "id": "cp_mild_looking_nausea",
+    "tags": [
+      "critical",
+      "mild_looking_dangerous"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Chest pain"
+    ]
+  },
+  {
+    "id": "cp_alone_young",
+    "tags": [
+      "critical"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": "EMERGENCY",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] Chest pain"
+    ]
+  },
+  {
+    "id": "headache_benign",
+    "tags": [
+      "benign"
+    ],
+    "tier": "SELF_CARE",
+    "expect_min": "SELF_CARE",
+    "expect_max": "SEE_DOCTOR_SOON",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": []
+  },
+  {
+    "id": "headache_thunderclap",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Sudden / worst-ever headache",
+      "[URGENT] Severity 9-10/10"
+    ]
+  },
+  {
+    "id": "stroke_speech",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Possible stroke / altered mental status"
+    ]
+  },
+  {
+    "id": "sob_at_rest",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Shortness of breath"
+    ]
+  },
+  {
+    "id": "sob_mild_asthma",
+    "tags": [
+      "critical"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": "EMERGENCY",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] Shortness of breath"
+    ]
+  },
+  {
+    "id": "crisis_symptom",
+    "tags": [
+      "critical",
+      "crisis"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Self-harm / harm-to-others language"
+    ]
+  },
+  {
+    "id": "crisis_free_text_only",
+    "tags": [
+      "critical",
+      "crisis"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Self-harm / harm-to-others language"
+    ]
+  },
+  {
+    "id": "common_cold",
+    "tags": [
+      "benign"
+    ],
+    "tier": "SELF_CARE",
+    "expect_min": "SELF_CARE",
+    "expect_max": "SEE_DOCTOR_SOON",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": []
+  },
+  {
+    "id": "fever_immunocompromised",
+    "tags": [
+      "critical"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] Fever while immunocompromised"
+    ]
+  },
+  {
+    "id": "abdominal_mild",
+    "tags": [
+      "benign"
+    ],
+    "tier": "SELF_CARE",
+    "expect_min": "SELF_CARE",
+    "expect_max": "SEE_DOCTOR_SOON",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": []
+  },
+  {
+    "id": "abdominal_rigid",
+    "tags": [
+      "critical"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] Abdominal pain with severe features"
+    ]
+  },
+  {
+    "id": "pregnancy_bleeding",
+    "tags": [
+      "critical"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] Pregnancy with pain/bleeding"
+    ]
+  },
+  {
+    "id": "gi_bleed_dizzy",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] GI bleeding"
+    ]
+  },
+  {
+    "id": "syncope_alone",
+    "tags": [
+      "critical"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": "EMERGENCY",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] Fainting"
+    ]
+  },
+  {
+    "id": "allergy_swelling",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Allergic reaction with airway/breathing involvement"
+    ]
+  },
+  {
+    "id": "allergy_rash",
+    "tags": [
+      "benign"
+    ],
+    "tier": "SEE_DOCTOR_SOON",
+    "expect_min": "SEE_DOCTOR_SOON",
+    "expect_max": "URGENT",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[SEE_DOCTOR_SOON] Allergic reaction"
+    ]
+  },
+  {
+    "id": "low_spo2_vague",
+    "tags": [
+      "critical",
+      "mild_looking_dangerous"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] SpO2 89"
+    ]
+  },
+  {
+    "id": "hypotension_dizzy",
+    "tags": [
+      "critical",
+      "mild_looking_dangerous"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Systolic BP 85"
+    ]
+  },
+  {
+    "id": "child_fever",
+    "tags": [
+      "scope"
+    ],
+    "tier": "SEE_DOCTOR_SOON",
+    "expect_min": "SEE_DOCTOR_SOON",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[SEE_DOCTOR_SOON] Under 18: outside the supported age range; refer to a pediatric clinician"
+    ]
+  },
+  {
+    "id": "testicle_sudden",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Testicular pain"
+    ]
+  },
+  {
+    "id": "cauda_equina",
+    "tags": [
+      "critical",
+      "mild_looking_dangerous"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Back pain with leg weakness or bladder/bowel loss"
+    ]
+  },
+  {
+    "id": "back_pain_benign",
+    "tags": [
+      "benign"
+    ],
+    "tier": "SELF_CARE",
+    "expect_min": "SELF_CARE",
+    "expect_max": "SEE_DOCTOR_SOON",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": []
+  },
+  {
+    "id": "ankle_sprain",
+    "tags": [
+      "benign"
+    ],
+    "tier": "SELF_CARE",
+    "expect_min": "SELF_CARE",
+    "expect_max": "SEE_DOCTOR_SOON",
+    "under": false,
+    "over": false,
+    "has_max": true,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": []
+  },
+  {
+    "id": "head_injury_blood_thinner",
+    "tags": [
+      "critical",
+      "mild_looking_dangerous"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] Head injury while on blood thinners"
+    ]
+  },
+  {
+    "id": "palpitations_faint",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Fainting",
+      "[EMERGENCY] Palpitations with fainting or chest pain"
+    ]
+  },
+  {
+    "id": "alcohol_withdrawal",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Emergency-only symptom group"
+    ]
+  },
+  {
+    "id": "overdose",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Emergency-only symptom group"
+    ]
+  },
+  {
+    "id": "dvt_one_leg",
+    "tags": [
+      "critical",
+      "mild_looking_dangerous"
+    ],
+    "tier": "URGENT",
+    "expect_min": "URGENT",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[URGENT] One-sided leg swelling (possible clot)"
+    ]
+  },
+  {
+    "id": "meningitis_signs",
+    "tags": [
+      "critical"
+    ],
+    "tier": "EMERGENCY",
+    "expect_min": "EMERGENCY",
+    "expect_max": null,
+    "under": false,
+    "over": false,
+    "has_max": false,
+    "problems": [],
+    "violations": [],
+    "used_fallback": false,
+    "reasons": [
+      "[EMERGENCY] Stiff neck with fever/headache"
+    ]
+  }
+]

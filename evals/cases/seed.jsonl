@@ -1,0 +1,32 @@
+{"id":"cp_classic","tags":["critical"],"intake":{"age":58,"sex":"male","symptoms":["chest_pain"],"modifiers":["radiating_arm_jaw","sweating"],"severity":7},"expect_min":"emergency"}
+{"id":"cp_mild_looking_nausea","tags":["critical","mild_looking_dangerous"],"intake":{"age":52,"sex":"female","symptoms":["chest_pain","nausea_vomiting"],"severity":3},"expect_min":"emergency"}
+{"id":"cp_alone_young","tags":["critical"],"intake":{"age":30,"sex":"male","symptoms":["chest_pain"],"severity":2,"duration_hours":1},"expect_min":"urgent","expect_max":"emergency"}
+{"id":"headache_benign","tags":["benign"],"intake":{"age":28,"sex":"female","symptoms":["headache"],"severity":3,"duration_hours":24},"expect_min":"self_care","expect_max":"see_doctor_soon"}
+{"id":"headache_thunderclap","tags":["critical"],"intake":{"age":35,"sex":"male","symptoms":["new_onset_headache"],"modifiers":["sudden_onset","worst_ever"],"severity":10},"expect_min":"emergency"}
+{"id":"stroke_speech","tags":["critical"],"intake":{"age":67,"sex":"female","symptoms":["focal_weakness_numbness"],"modifiers":["speech_difficulty"]},"expect_min":"emergency"}
+{"id":"sob_at_rest","tags":["critical"],"intake":{"age":45,"sex":"male","symptoms":["shortness_of_breath"],"modifiers":["at_rest"]},"expect_min":"emergency"}
+{"id":"sob_mild_asthma","tags":["critical"],"intake":{"age":25,"sex":"female","symptoms":["shortness_of_breath","wheezing_asthma"],"severity":3},"expect_min":"urgent","expect_max":"emergency"}
+{"id":"crisis_symptom","tags":["critical","crisis"],"intake":{"age":34,"sex":"female","symptoms":["low_mood"],"free_text":"I want to die"},"expect_min":"emergency","expect_crisis":true}
+{"id":"crisis_free_text_only","tags":["critical","crisis"],"intake":{"age":41,"sex":"male","symptoms":[],"free_text":"I keep thinking about ending my life"},"expect_min":"emergency","expect_crisis":true}
+{"id":"common_cold","tags":["benign"],"intake":{"age":30,"sex":"male","symptoms":["cold_flu_sore_throat","fever_chills"],"duration_hours":48,"vitals":{"temp_c":37.9}},"expect_min":"self_care","expect_max":"see_doctor_soon"}
+{"id":"fever_immunocompromised","tags":["critical"],"intake":{"age":55,"sex":"female","symptoms":["fever_chills"],"immunocompromised":true},"expect_min":"urgent"}
+{"id":"abdominal_mild","tags":["benign"],"intake":{"age":28,"sex":"female","symptoms":["abdominal_pain","bowel_changes"],"severity":3,"duration_hours":12},"expect_min":"self_care","expect_max":"see_doctor_soon"}
+{"id":"abdominal_rigid","tags":["critical"],"intake":{"age":40,"sex":"male","symptoms":["abdominal_pain"],"modifiers":["rigid_abdomen"],"severity":8},"expect_min":"urgent"}
+{"id":"pregnancy_bleeding","tags":["critical"],"intake":{"age":29,"sex":"female","pregnant":true,"symptoms":["vaginal_bleeding"]},"expect_min":"urgent"}
+{"id":"gi_bleed_dizzy","tags":["critical"],"intake":{"age":60,"sex":"male","symptoms":["gi_bleeding","dizziness"]},"expect_min":"emergency"}
+{"id":"syncope_alone","tags":["critical"],"intake":{"age":40,"sex":"male","symptoms":["fainting"]},"expect_min":"urgent","expect_max":"emergency"}
+{"id":"allergy_swelling","tags":["critical"],"intake":{"age":33,"sex":"female","symptoms":["allergic_reaction","mouth_face_swelling"]},"expect_min":"emergency"}
+{"id":"allergy_rash","tags":["benign"],"intake":{"age":33,"sex":"female","symptoms":["allergic_reaction","rash_skin"]},"expect_min":"see_doctor_soon","expect_max":"urgent"}
+{"id":"low_spo2_vague","tags":["critical","mild_looking_dangerous"],"intake":{"age":70,"sex":"male","symptoms":["fatigue_weakness"],"vitals":{"spo2":89}},"expect_min":"emergency"}
+{"id":"hypotension_dizzy","tags":["critical","mild_looking_dangerous"],"intake":{"age":50,"sex":"female","symptoms":["dizziness"],"vitals":{"systolic_bp":85}},"expect_min":"emergency"}
+{"id":"child_fever","tags":["scope"],"intake":{"age":8,"sex":"male","symptoms":["fever_chills"]},"expect_min":"see_doctor_soon","expect_out_of_scope":true}
+{"id":"testicle_sudden","tags":["critical"],"intake":{"age":22,"sex":"male","symptoms":["testicular_pain"],"modifiers":["sudden_onset"]},"expect_min":"emergency"}
+{"id":"cauda_equina","tags":["critical","mild_looking_dangerous"],"intake":{"age":45,"sex":"male","symptoms":["back_pain"],"modifiers":["leg_weakness","bladder_bowel_loss"],"severity":4},"expect_min":"emergency"}
+{"id":"back_pain_benign","tags":["benign"],"intake":{"age":38,"sex":"female","symptoms":["back_pain"],"severity":4,"duration_hours":72},"expect_min":"self_care","expect_max":"see_doctor_soon"}
+{"id":"ankle_sprain","tags":["benign"],"intake":{"age":25,"sex":"male","symptoms":["limb_injury","lower_limb_pain"],"severity":4},"expect_min":"self_care","expect_max":"see_doctor_soon"}
+{"id":"head_injury_blood_thinner","tags":["critical","mild_looking_dangerous"],"intake":{"age":72,"sex":"female","symptoms":["head_face_injury"],"on_anticoagulants":true,"severity":2},"expect_min":"urgent"}
+{"id":"palpitations_faint","tags":["critical"],"intake":{"age":55,"sex":"female","symptoms":["palpitations","fainting"]},"expect_min":"emergency"}
+{"id":"alcohol_withdrawal","tags":["critical"],"intake":{"age":48,"sex":"male","symptoms":["alcohol_withdrawal"]},"expect_min":"emergency"}
+{"id":"overdose","tags":["critical"],"intake":{"age":30,"sex":"female","symptoms":["poisoning_overdose"]},"expect_min":"emergency"}
+{"id":"dvt_one_leg","tags":["critical","mild_looking_dangerous"],"intake":{"age":50,"sex":"female","symptoms":["swelling_edema"],"modifiers":["one_leg"],"severity":3},"expect_min":"urgent"}
+{"id":"meningitis_signs","tags":["critical"],"intake":{"age":22,"sex":"male","symptoms":["headache","fever_chills"],"modifiers":["stiff_neck"]},"expect_min":"emergency"}

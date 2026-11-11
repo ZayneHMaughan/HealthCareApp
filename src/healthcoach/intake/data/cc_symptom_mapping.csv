@@ -1,0 +1,201 @@
+raw_column,group,treatment,red_flag,note
+cc_abdominalcramping,abdominal_pain,feature,conditional,"Escalate if severe, persistent, with fever/vomiting/blood, or rigid abdomen. abdominalpainpregnant: also set a pregnancy flag from intake."
+cc_abdominalpain,abdominal_pain,feature,conditional,"Escalate if severe, persistent, with fever/vomiting/blood, or rigid abdomen. abdominalpainpregnant: also set a pregnancy flag from intake."
+cc_epigastricpain,abdominal_pain,feature,conditional,"Escalate if severe, persistent, with fever/vomiting/blood, or rigid abdomen. abdominalpainpregnant: also set a pregnancy flag from intake."
+cc_abdominalpainpregnant,abdominal_pain,feature,conditional,"Escalate if severe, persistent, with fever/vomiting/blood, or rigid abdomen. abdominalpainpregnant: also set a pregnancy flag from intake."
+cc_abdominaldistention,abdominal_swelling,feature,no,
+cc_pelvicpain,pelvic_groin_pain,feature,conditional,"Escalate with fever, pregnancy, or sudden severe onset."
+cc_groinpain,pelvic_groin_pain,feature,conditional,"Escalate with fever, pregnancy, or sudden severe onset."
+cc_nausea,nausea_vomiting,feature,conditional,Escalate if unable to keep fluids down or with blood.
+cc_emesis,nausea_vomiting,feature,conditional,Escalate if unable to keep fluids down or with blood.
+cc_diarrhea,bowel_changes,feature,no,
+cc_constipation,bowel_changes,feature,no,
+cc_giproblem,bowel_changes,feature,no,
+cc_rectalpain,bowel_changes,feature,no,
+cc_gibleeding,gi_bleeding,feature,yes,Vomiting blood or black/bloody stool.
+cc_rectalbleeding,gi_bleeding,feature,yes,Vomiting blood or black/bloody stool.
+cc_swallowedforeignbody,swallowed_foreign_body,feature,conditional,"Escalate with drooling, breathing trouble, or button batteries/magnets in children."
+cc_chestpain,chest_pain,feature,yes,Also a hard-coded red-flag symptom in the rule layer.
+cc_chesttightness,chest_pain,feature,yes,Also a hard-coded red-flag symptom in the rule layer.
+cc_ribpain,chest_wall_pain,feature,conditional,Rib pain after injury; escalate with breathing difficulty.
+cc_ribinjury,chest_wall_pain,feature,conditional,Rib pain after injury; escalate with breathing difficulty.
+cc_breathingdifficulty,shortness_of_breath,feature,yes,Five near-duplicate triage labels merged.
+cc_breathingproblem,shortness_of_breath,feature,yes,Five near-duplicate triage labels merged.
+cc_dyspnea,shortness_of_breath,feature,yes,Five near-duplicate triage labels merged.
+cc_shortnessofbreath,shortness_of_breath,feature,yes,Five near-duplicate triage labels merged.
+cc_respiratorydistress,shortness_of_breath,feature,yes,Five near-duplicate triage labels merged.
+cc_wheezing,wheezing_asthma,feature,conditional,Escalate if not relieved by usual inhaler.
+cc_asthma,wheezing_asthma,feature,conditional,Escalate if not relieved by usual inhaler.
+cc_cough,cough,feature,no,
+cc_hemoptysis,coughing_blood,feature,yes,
+cc_coldlikesymptoms,cold_flu_sore_throat,feature,no,
+cc_uri,cold_flu_sore_throat,feature,no,
+cc_nasalcongestion,cold_flu_sore_throat,feature,no,
+cc_sinusproblem,cold_flu_sore_throat,feature,no,
+cc_sorethroat,cold_flu_sore_throat,feature,no,
+cc_influenza,cold_flu_sore_throat,feature,no,
+cc_fever,fever_chills,feature,conditional,"Age/immunocompromise variants are collapsed: derive those from age and history inputs, not the category. Rule layer: infant, elderly, immunocompromised, or very high fever escalates."
+cc_chills,fever_chills,feature,conditional,"Age/immunocompromise variants are collapsed: derive those from age and history inputs, not the category. Rule layer: infant, elderly, immunocompromised, or very high fever escalates."
+cc_fever-75yearsorolder,fever_chills,feature,conditional,"Age/immunocompromise variants are collapsed: derive those from age and history inputs, not the category. Rule layer: infant, elderly, immunocompromised, or very high fever escalates."
+cc_fever-9weeksto74years,fever_chills,feature,conditional,"Age/immunocompromise variants are collapsed: derive those from age and history inputs, not the category. Rule layer: infant, elderly, immunocompromised, or very high fever escalates."
+cc_feverimmunocompromised,fever_chills,feature,conditional,"Age/immunocompromise variants are collapsed: derive those from age and history inputs, not the category. Rule layer: infant, elderly, immunocompromised, or very high fever escalates."
+cc_palpitations,palpitations,feature,conditional,"Escalate with chest pain, fainting, or breathlessness."
+cc_irregularheartbeat,palpitations,feature,conditional,"Escalate with chest pain, fainting, or breathlessness."
+cc_rapidheartrate,palpitations,feature,conditional,"Escalate with chest pain, fainting, or breathlessness."
+cc_tachycardia,palpitations,feature,conditional,"Escalate with chest pain, fainting, or breathlessness."
+cc_dizziness,dizziness,feature,conditional,Escalate with neuro deficits or chest pain.
+cc_nearsyncope,fainting,feature,yes,
+cc_syncope,fainting,feature,yes,
+cc_lossofconsciousness,fainting,feature,yes,
+cc_headache,headache,feature,conditional,Known-migraine pattern.
+cc_headache-recurrentorknowndxmigraines,headache,feature,conditional,Known-migraine pattern.
+cc_migraine,headache,feature,conditional,Known-migraine pattern.
+cc_headache-newonsetornewsymptoms,new_onset_headache,feature,conditional,"Sudden/worst-ever, with fever/stiff neck, or after head injury escalates."
+cc_extremityweakness,focal_weakness_numbness,feature,yes,One-sided weakness/numbness is a stroke red flag.
+cc_numbness,focal_weakness_numbness,feature,yes,One-sided weakness/numbness is a stroke red flag.
+cc_neurologicproblem,focal_weakness_numbness,feature,yes,One-sided weakness/numbness is a stroke red flag.
+cc_strokealert,stroke_alert,rule_only,yes,"Triage protocol activation; not self-reported. Use to validate stroke rules (face droop, arm weakness, speech)."
+cc_confusion,confusion_altered_mental,feature,yes,
+cc_alteredmentalstatus,confusion_altered_mental,feature,yes,
+cc_lethargy,confusion_altered_mental,feature,yes,
+cc_unresponsive,unresponsive_arrest,rule_only,yes,Cannot be self-reported (bystander scenario); route to emergency guidance.
+cc_cardiacarrest,unresponsive_arrest,rule_only,yes,Cannot be self-reported (bystander scenario); route to emergency guidance.
+cc_seizure-newonset,seizure,feature,yes,New-onset seizure is a red flag; known epilepsy is conditional.
+cc_seizure-priorhxof,seizure,feature,yes,New-onset seizure is a red flag; known epilepsy is conditional.
+cc_seizures,seizure,feature,yes,New-onset seizure is a red flag; known epilepsy is conditional.
+cc_fatigue,fatigue_weakness,feature,no,"Generalized weakness, not focal."
+cc_weakness,fatigue_weakness,feature,no,"Generalized weakness, not focal."
+cc_generalizedbodyaches,body_aches,feature,no,
+cc_blurredvision,vision_problems,feature,conditional,Sudden vision loss escalates.
+cc_eyeinjury,eye_problems,feature,conditional,Chemical exposure or injury escalates.
+cc_eyepain,eye_problems,feature,conditional,Chemical exposure or injury escalates.
+cc_eyeproblem,eye_problems,feature,conditional,Chemical exposure or injury escalates.
+cc_eyeredness,eye_problems,feature,conditional,Chemical exposure or injury escalates.
+cc_foreignbodyineye,eye_problems,feature,conditional,Chemical exposure or injury escalates.
+cc_conjunctivitis,eye_problems,feature,conditional,Chemical exposure or injury escalates.
+cc_earpain,ear_problems,feature,no,
+cc_earproblem,ear_problems,feature,no,
+cc_otalgia,ear_problems,feature,no,
+cc_dentalpain,dental_pain,feature,no,
+cc_facialswelling,mouth_face_swelling,feature,conditional,"With trouble breathing/swallowing, treat as emergency."
+cc_oralswelling,mouth_face_swelling,feature,conditional,"With trouble breathing/swallowing, treat as emergency."
+cc_facialpain,facial_jaw_pain,feature,conditional,Jaw pain can be cardiac; cross-check with chest/arm symptoms.
+cc_jawpain,facial_jaw_pain,feature,conditional,Jaw pain can be cardiac; cross-check with chest/arm symptoms.
+cc_neckpain,neck_pain,feature,conditional,With fever/stiff neck or after trauma escalates.
+cc_backpain,back_pain,feature,conditional,"Leg weakness, numbness, or bladder/bowel loss escalates."
+cc_armpain,upper_limb_pain,feature,no,Body-region columns collapsed.
+cc_elbowpain,upper_limb_pain,feature,no,Body-region columns collapsed.
+cc_handpain,upper_limb_pain,feature,no,Body-region columns collapsed.
+cc_fingerpain,upper_limb_pain,feature,no,Body-region columns collapsed.
+cc_shoulderpain,upper_limb_pain,feature,no,Body-region columns collapsed.
+cc_wristpain,upper_limb_pain,feature,no,Body-region columns collapsed.
+cc_anklepain,lower_limb_pain,feature,no,Body-region columns collapsed.
+cc_footpain,lower_limb_pain,feature,no,Body-region columns collapsed.
+cc_hippain,lower_limb_pain,feature,no,Body-region columns collapsed.
+cc_kneepain,lower_limb_pain,feature,no,Body-region columns collapsed.
+cc_legpain,lower_limb_pain,feature,no,Body-region columns collapsed.
+cc_toepain,lower_limb_pain,feature,no,Body-region columns collapsed.
+cc_armswelling,swelling_edema,feature,conditional,Single swollen calf or swelling with breathlessness escalates.
+cc_fingerswelling,swelling_edema,feature,conditional,Single swollen calf or swelling with breathlessness escalates.
+cc_footswelling,swelling_edema,feature,conditional,Single swollen calf or swelling with breathlessness escalates.
+cc_jointswelling,swelling_edema,feature,conditional,Single swollen calf or swelling with breathlessness escalates.
+cc_legswelling,swelling_edema,feature,conditional,Single swollen calf or swelling with breathlessness escalates.
+cc_edema,swelling_edema,feature,conditional,Single swollen calf or swelling with breathlessness escalates.
+cc_breastpain,breast_pain,feature,no,
+cc_ankleinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_arminjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_fingerinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_footinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_handinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_kneeinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_leginjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_shoulderinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_thumbinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_toeinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_wristinjury,limb_injury,feature,conditional,"Deformity, inability to bear weight, or numbness escalates."
+cc_headinjury,head_face_injury,feature,conditional,"Loss of consciousness, vomiting, confusion, or anticoagulant use escalates."
+cc_facialinjury,head_face_injury,feature,conditional,"Loss of consciousness, vomiting, confusion, or anticoagulant use escalates."
+cc_extremitylaceration,cuts_lacerations,feature,conditional,Uncontrolled bleeding escalates.
+cc_faciallaceration,cuts_lacerations,feature,conditional,Uncontrolled bleeding escalates.
+cc_headlaceration,cuts_lacerations,feature,conditional,Uncontrolled bleeding escalates.
+cc_laceration,cuts_lacerations,feature,conditional,Uncontrolled bleeding escalates.
+cc_fall,fall,feature,conditional,fall>65 is age-coded: derive from age input.
+cc_fall>65,fall,feature,conditional,fall>65 is age-coded: derive from age input.
+cc_multiplefalls,fall,feature,conditional,fall>65 is age-coded: derive from age input.
+cc_motorvehiclecrash,vehicle_crash,feature,conditional,
+cc_motorcyclecrash,vehicle_crash,feature,conditional,
+cc_trauma,trauma_protocol,rule_only,yes,Triage protocol activations encode acuity; leakage if used as features.
+cc_fulltrauma,trauma_protocol,rule_only,yes,Triage protocol activations encode acuity; leakage if used as features.
+cc_modifiedtrauma,trauma_protocol,rule_only,yes,Triage protocol activations encode acuity; leakage if used as features.
+cc_burn,burns,feature,conditional,"Large, facial, or chemical/electrical burns escalate."
+cc_animalbite,bites_stings,feature,conditional,"Escalate with spreading redness, fever, or allergic signs."
+cc_insectbite,bites_stings,feature,conditional,"Escalate with spreading redness, fever, or allergic signs."
+cc_tickremoval,bites_stings,feature,conditional,"Escalate with spreading redness, fever, or allergic signs."
+cc_assaultvictim,assault_violence,rule_only,yes,Route to safety resources; not a classifier feature.
+cc_bodyfluidexposure,infection_exposure,feature,no,
+cc_exposuretostd,infection_exposure,feature,no,
+cc_stdcheck,infection_exposure,feature,no,
+cc_ingestion,poisoning_overdose,rule_only,yes,Route to poison control/emergency guidance.
+cc_poisoning,poisoning_overdose,rule_only,yes,Route to poison control/emergency guidance.
+cc_overdose-accidental,poisoning_overdose,rule_only,yes,Route to poison control/emergency guidance.
+cc_overdose-intentional,poisoning_overdose,rule_only,yes,Route to poison control/emergency guidance.
+cc_rash,rash_skin,feature,conditional,"Rash with fever, or with facial/mouth swelling, escalates."
+cc_skinirritation,rash_skin,feature,conditional,"Rash with fever, or with facial/mouth swelling, escalates."
+cc_skinproblem,rash_skin,feature,conditional,"Rash with fever, or with facial/mouth swelling, escalates."
+cc_abscess,skin_infection_lump,feature,conditional,"Spreading redness, fever, or red streaking escalates."
+cc_cellulitis,skin_infection_lump,feature,conditional,"Spreading redness, fever, or red streaking escalates."
+cc_woundinfection,skin_infection_lump,feature,conditional,"Spreading redness, fever, or red streaking escalates."
+cc_cyst,skin_infection_lump,feature,conditional,"Spreading redness, fever, or red streaking escalates."
+cc_mass,skin_infection_lump,feature,conditional,"Spreading redness, fever, or red streaking escalates."
+cc_allergicreaction,allergic_reaction,feature,yes,Any breathing or throat involvement is an emergency.
+cc_bleeding/bruising,bleeding_bruising,feature,conditional,Higher risk on anticoagulants.
+cc_epistaxis,bleeding_bruising,feature,conditional,Higher risk on anticoagulants.
+cc_dysuria,urinary_symptoms,feature,conditional,"Retention, blood in urine, fever, or flank pain escalates."
+cc_urinaryfrequency,urinary_symptoms,feature,conditional,"Retention, blood in urine, fever, or flank pain escalates."
+cc_urinarytractinfection,urinary_symptoms,feature,conditional,"Retention, blood in urine, fever, or flank pain escalates."
+cc_hematuria,urinary_symptoms,feature,conditional,"Retention, blood in urine, fever, or flank pain escalates."
+cc_urinaryretention,urinary_symptoms,feature,conditional,"Retention, blood in urine, fever, or flank pain escalates."
+cc_flankpain,flank_pain,feature,conditional,With fever or vomiting escalates.
+cc_testiclepain,testicular_pain,feature,yes,Sudden testicular pain is time-critical (torsion).
+cc_maleguproblem,genital_problems,feature,no,
+cc_femaleguproblem,genital_problems,feature,no,
+cc_vaginaldischarge,vaginal_symptoms,feature,no,
+cc_vaginalpain,vaginal_symptoms,feature,no,
+cc_vaginalbleeding,vaginal_bleeding,feature,conditional,Pregnancy or heavy bleeding escalates.
+cc_decreasedbloodsugar-symptomatic,blood_sugar_problem,feature,conditional,Low sugar with confusion escalates.
+cc_elevatedbloodsugar-nosymptoms,blood_sugar_problem,feature,conditional,Low sugar with confusion escalates.
+cc_elevatedbloodsugar-symptomatic,blood_sugar_problem,feature,conditional,Low sugar with confusion escalates.
+cc_hyperglycemia,blood_sugar_problem,feature,conditional,Low sugar with confusion escalates.
+cc_dehydration,dehydration,feature,conditional,
+cc_hypertension,bp_reading,drop,conditional,Triage label derived from a BP reading; use the numeric BP input instead.
+cc_hypotension,bp_reading,drop,conditional,Triage label derived from a BP reading; use the numeric BP input instead.
+cc_anxiety,anxiety_panic,feature,no,
+cc_panicattack,anxiety_panic,feature,no,
+cc_depression,low_mood,feature,conditional,Screen for self-harm in the rule layer.
+cc_agitation,agitation_psychosis,feature,conditional,
+cc_hallucinations,agitation_psychosis,feature,conditional,
+cc_psychoticsymptoms,agitation_psychosis,feature,conditional,
+cc_suicidal,suicidal_homicidal,rule_only,yes,Hard-coded crisis response; never a classifier feature.
+cc_homicidal,suicidal_homicidal,rule_only,yes,Hard-coded crisis response; never a classifier feature.
+cc_alcoholintoxication,substance_use,feature,no,
+cc_alcoholproblem,substance_use,feature,no,
+cc_addictionproblem,substance_use,feature,no,
+cc_drugproblem,substance_use,feature,no,
+cc_withdrawal-alcohol,alcohol_withdrawal,feature,yes,Seizure/DT risk.
+cc_sicklecellpain,sickle_cell_pain,drop,conditional,"Known-condition flag; model via diagnosis history (sicklecell), not symptom list."
+cc_pain,generic_pain,feature,no,Nonspecific; use only if no body region is given.
+cc_post-opproblem,post_surgical_problem,feature,conditional,"Fever, wound opening, or heavy bleeding escalates."
+cc_follow-upcellulitis,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_woundre-evaluation,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_woundcheck,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_suture/stapleremoval,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_headachere-evaluation,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_detoxevaluation,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_drug/alcoholassessment,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_psychiatricevaluation,admin_followup,drop,no,"Follow-up/recheck visits, not new symptoms."
+cc_abnormallab,admin_nonsymptom,drop,no,Not self-reportable or no symptom content.
+cc_medicalscreening,admin_nonsymptom,drop,no,Not self-reportable or no symptom content.
+cc_medicationrefill,admin_nonsymptom,drop,no,Not self-reportable or no symptom content.
+cc_medicationproblem,admin_nonsymptom,drop,no,Not self-reportable or no symptom content.
+cc_medicalproblem,admin_nonsymptom,drop,no,Not self-reportable or no symptom content.
+cc_other,admin_nonsymptom,drop,no,Not self-reportable or no symptom content.

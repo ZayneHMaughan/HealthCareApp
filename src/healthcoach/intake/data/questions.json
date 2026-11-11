@@ -1,0 +1,459 @@
+{
+ "screener": {
+  "text": "Before we start: is any of this happening right now?",
+  "items": [
+   {
+    "id": "unresponsive",
+    "label": "Someone is unresponsive or not breathing normally",
+    "symptoms": [
+     "unresponsive_arrest"
+    ],
+    "modifiers": [],
+    "halt": true
+   },
+   {
+    "id": "face_droop",
+    "label": "One side of the face is drooping",
+    "symptoms": [],
+    "modifiers": [
+     "facial_droop"
+    ],
+    "halt": true
+   },
+   {
+    "id": "speech",
+    "label": "Slurred speech, or trouble speaking or understanding",
+    "symptoms": [],
+    "modifiers": [
+     "speech_difficulty"
+    ],
+    "halt": true
+   },
+   {
+    "id": "one_sided",
+    "label": "Sudden weakness or numbness on one side of the body, or sudden confusion",
+    "symptoms": [
+     "stroke_alert"
+    ],
+    "modifiers": [],
+    "halt": true
+   },
+   {
+    "id": "breathing",
+    "label": "Struggling to breathe, or can't speak a full sentence",
+    "symptoms": [
+     "shortness_of_breath"
+    ],
+    "modifiers": [
+     "cant_speak_sentences"
+    ],
+    "halt": true
+   },
+   {
+    "id": "chest",
+    "label": "Chest pain or pressure with sweating, or spreading to the arm, jaw, or back",
+    "symptoms": [
+     "chest_pain"
+    ],
+    "modifiers": [
+     "sweating"
+    ],
+    "halt": true
+   },
+   {
+    "id": "anaphylaxis",
+    "label": "Swelling of the face, lips, or throat, or trouble breathing after a sting, food, or medicine",
+    "symptoms": [
+     "allergic_reaction"
+    ],
+    "modifiers": [
+     "throat_tightness"
+    ],
+    "halt": true
+   },
+   {
+    "id": "bleeding",
+    "label": "Heavy bleeding that won't stop after 10 minutes of firm pressure",
+    "symptoms": [
+     "bleeding_bruising"
+    ],
+    "modifiers": [
+     "heavy_bleeding"
+    ],
+    "halt": true
+   },
+   {
+    "id": "overdose",
+    "label": "Overdose, poisoning, or swallowing something dangerous",
+    "symptoms": [
+     "poisoning_overdose"
+    ],
+    "modifiers": [],
+    "halt": true
+   },
+   {
+    "id": "alcohol",
+    "label": "Stopped drinking heavily and now have severe shaking, seizures, or hallucinations",
+    "symptoms": [
+     "alcohol_withdrawal"
+    ],
+    "modifiers": [],
+    "halt": true
+   },
+   {
+    "id": "self_harm",
+    "label": "Thoughts of suicide, or of hurting yourself or someone else",
+    "symptoms": [
+     "suicidal_homicidal"
+    ],
+    "modifiers": [],
+    "halt": true
+   },
+   {
+    "id": "unsafe",
+    "label": "Someone has hurt you, or you don't feel safe",
+    "symptoms": [
+     "assault_violence"
+    ],
+    "modifiers": [],
+    "halt": false
+   }
+  ]
+ },
+ "durations": [
+  {
+   "id": "under_1h",
+   "label": "Less than an hour",
+   "hours": 0.5
+  },
+  {
+   "id": "few_hours",
+   "label": "A few hours",
+   "hours": 4
+  },
+  {
+   "id": "about_a_day",
+   "label": "About a day",
+   "hours": 24
+  },
+  {
+   "id": "two_three_days",
+   "label": "2 to 3 days",
+   "hours": 60
+  },
+  {
+   "id": "four_seven_days",
+   "label": "4 to 7 days",
+   "hours": 120
+  },
+  {
+   "id": "over_a_week",
+   "label": "More than a week",
+   "hours": 240
+  }
+ ],
+ "modifier_questions": [
+  {
+   "modifier": "radiating_arm_jaw",
+   "text": "Does the pain spread to your arm, shoulder, neck, jaw, or back?",
+   "why": "Pain that spreads can be a sign of a heart problem.",
+   "symptoms_any": [
+    "chest_pain"
+   ],
+   "unsure": "no",
+   "priority": 1
+  },
+  {
+   "modifier": "sweating",
+   "text": "Are you sweating heavily or feeling clammy for no clear reason?",
+   "why": "Cold sweats with chest or jaw pain can signal a heart problem.",
+   "symptoms_any": [
+    "chest_pain",
+    "facial_jaw_pain"
+   ],
+   "unsure": "no",
+   "priority": 1
+  },
+  {
+   "modifier": "at_rest",
+   "text": "Are you short of breath even while sitting still?",
+   "why": "Breathlessness at rest is more concerning than breathlessness with effort.",
+   "symptoms_any": [
+    "shortness_of_breath"
+   ],
+   "unsure": "no",
+   "priority": 1
+  },
+  {
+   "modifier": "cant_speak_sentences",
+   "text": "Is it hard to say a full sentence without stopping for breath?",
+   "why": "This helps tell how severe the breathing problem is.",
+   "symptoms_any": [
+    "shortness_of_breath"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "throat_tightness",
+   "text": "Does your throat feel tight, or is it hard to swallow or breathe?",
+   "why": "Throat tightness can mean a dangerous allergic reaction.",
+   "symptoms_any": [
+    "allergic_reaction",
+    "bites_stings",
+    "mouth_face_swelling"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "first_seizure",
+   "text": "Is this the first seizure you've ever had?",
+   "why": "A first seizure needs urgent evaluation.",
+   "symptoms_any": [
+    "seizure"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "worst_ever",
+   "text": "Is this the worst headache of your life?",
+   "why": "A sudden, severe headache can signal bleeding in the brain.",
+   "symptoms_any": [
+    "new_onset_headache"
+   ],
+   "unsure": "no",
+   "priority": 1
+  },
+  {
+   "modifier": "sudden_onset",
+   "text": "Did it start suddenly, reaching full strength within a few minutes?",
+   "why": "Sudden onset can point to a more serious cause.",
+   "symptoms_any": [
+    "new_onset_headache",
+    "vision_problems",
+    "testicular_pain"
+   ],
+   "unsure": "no",
+   "priority": 1
+  },
+  {
+   "modifier": "stiff_neck",
+   "text": "Is your neck so stiff that bringing your chin to your chest hurts?",
+   "why": "Fever or headache with a stiff neck can signal meningitis.",
+   "symptoms_any": [
+    "headache",
+    "new_onset_headache",
+    "fever_chills",
+    "neck_pain"
+   ],
+   "unsure": "no",
+   "priority": 1
+  },
+  {
+   "modifier": "leg_weakness",
+   "text": "Is one or both of your legs weak or giving way?",
+   "why": "Back pain with leg weakness can mean nerve compression.",
+   "symptoms_any": [
+    "back_pain"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "bladder_bowel_loss",
+   "text": "Any loss of bladder or bowel control, or numbness around your groin or inner thighs?",
+   "why": "These can be signs of serious nerve compression that needs urgent care.",
+   "symptoms_any": [
+    "back_pain"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "heavy_bleeding",
+   "text": "Is the bleeding heavy, for example soaking a pad every hour or not slowing with pressure?",
+   "why": "Heavy bleeding can become dangerous quickly.",
+   "symptoms_any": [
+    "gi_bleeding",
+    "vaginal_bleeding",
+    "cuts_lacerations",
+    "bleeding_bruising"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "rigid_abdomen",
+   "text": "Is your belly hard as a board, or too painful to touch?",
+   "why": "A rigid, tender belly can signal a serious problem inside the abdomen.",
+   "symptoms_any": [
+    "abdominal_pain"
+   ],
+   "unsure": "no",
+   "priority": 2
+  },
+  {
+   "modifier": "unable_to_urinate",
+   "text": "Are you unable to pass urine?",
+   "why": "Not being able to urinate needs prompt care.",
+   "symptoms_any": [
+    "urinary_symptoms"
+   ],
+   "unsure": "no",
+   "priority": 2
+  },
+  {
+   "modifier": "loss_of_consciousness",
+   "text": "Did you black out, even briefly, after the injury?",
+   "why": "Losing consciousness after a head injury can signal a brain injury.",
+   "symptoms_any": [
+    "head_face_injury"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "repeated_vomiting",
+   "text": "Have you vomited more than once since the injury?",
+   "why": "Repeated vomiting after a head injury can be a warning sign.",
+   "symptoms_any": [
+    "head_face_injury"
+   ],
+   "unsure": "no",
+   "priority": 2
+  },
+  {
+   "modifier": "large_burn",
+   "text": "Is the burn larger than the palm of your hand?",
+   "why": "Larger burns need medical care.",
+   "symptoms_any": [
+    "burns"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "face_or_airway",
+   "text": "Is the burn on your face, or did you breathe in smoke or hot air?",
+   "why": "Burns near the airway can cause breathing problems later.",
+   "symptoms_any": [
+    "burns"
+   ],
+   "unsure": "yes",
+   "priority": 1
+  },
+  {
+   "modifier": "chemical_or_electrical",
+   "text": "Was it caused by a chemical or electricity?",
+   "why": "These burns can be deeper than they look.",
+   "symptoms_any": [
+    "burns"
+   ],
+   "unsure": "no",
+   "priority": 1
+  },
+  {
+   "modifier": "one_leg",
+   "text": "Is the swelling in only one leg?",
+   "why": "Swelling in just one leg can be a sign of a blood clot.",
+   "symptoms_any": [
+    "swelling_edema"
+   ],
+   "unsure": "no",
+   "priority": 2
+  },
+  {
+   "modifier": "unable_keep_fluids",
+   "text": "Are you unable to keep fluids down?",
+   "why": "Not keeping fluids down can lead to dehydration.",
+   "symptoms_any": [
+    "dehydration",
+    "nausea_vomiting",
+    "bowel_changes"
+   ],
+   "unsure": "no",
+   "priority": 2
+  }
+ ],
+ "context_questions": [
+  {
+   "field": "on_anticoagulants",
+   "text": "Do you take a blood thinner, such as warfarin, apixaban (Eliquis), rivaroxaban (Xarelto), or clopidogrel (Plavix)?",
+   "why": "Blood thinners make bleeding after a head injury more dangerous.",
+   "symptoms_any": [
+    "head_face_injury"
+   ],
+   "unsure": "yes"
+  },
+  {
+   "field": "immunocompromised",
+   "text": "Is your immune system weakened, for example from chemotherapy, a transplant, long-term steroids, or HIV?",
+   "why": "Fever can be more serious when the immune system is weakened.",
+   "symptoms_any": [
+    "fever_chills"
+   ],
+   "unsure": "yes"
+  }
+ ],
+ "vitals": [
+  {
+   "name": "heart_rate",
+   "label": "Pulse (beats per minute)",
+   "min": 20,
+   "max": 250,
+   "units": null,
+   "symptoms_any": [
+    "chest_pain",
+    "palpitations",
+    "dizziness",
+    "fainting",
+    "shortness_of_breath",
+    "fatigue_weakness"
+   ]
+  },
+  {
+   "name": "spo2",
+   "label": "Oxygen level from a pulse oximeter (%)",
+   "min": 50,
+   "max": 100,
+   "units": null,
+   "symptoms_any": [
+    "shortness_of_breath",
+    "fatigue_weakness",
+    "wheezing_asthma",
+    "cough",
+    "dizziness"
+   ]
+  },
+  {
+   "name": "systolic_bp",
+   "label": "Blood pressure, the top number",
+   "min": 50,
+   "max": 260,
+   "units": null,
+   "symptoms_any": [
+    "dizziness",
+    "fainting",
+    "chest_pain",
+    "palpitations",
+    "fatigue_weakness"
+   ]
+  },
+  {
+   "name": "temp_c",
+   "label": "Temperature",
+   "min": 30,
+   "max": 45,
+   "units": [
+    "C",
+    "F"
+   ],
+   "symptoms_any": [
+    "fever_chills",
+    "cold_flu_sore_throat"
+   ]
+  }
+ ]
+}

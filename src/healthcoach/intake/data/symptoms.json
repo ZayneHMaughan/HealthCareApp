@@ -1,0 +1,593 @@
+{
+ "categories": {
+  "head": "Head, eyes, ears & mouth",
+  "chest": "Chest & breathing",
+  "gut": "Stomach & digestion",
+  "body": "Muscles, bones & injuries",
+  "skin": "Skin & wounds",
+  "gu": "Urinary & reproductive",
+  "mind": "Mind & mood",
+  "gen": "General & whole body",
+  "neuro": "Nerves & brain",
+  "heart": "Heart & circulation"
+ },
+ "groups": {
+  "abdominal_pain": {
+   "label": "Belly or stomach pain",
+   "category": "gut",
+   "synonyms": [
+    "stomach ache",
+    "cramps",
+    "abdominal pain",
+    "tummy"
+   ]
+  },
+  "abdominal_swelling": {
+   "label": "Bloated or swollen belly",
+   "category": "gut",
+   "synonyms": [
+    "bloating",
+    "distended"
+   ]
+  },
+  "pelvic_groin_pain": {
+   "label": "Pelvic or groin pain",
+   "category": "gu",
+   "synonyms": [
+    "groin",
+    "pelvis"
+   ]
+  },
+  "nausea_vomiting": {
+   "label": "Nausea or vomiting",
+   "category": "gut",
+   "synonyms": [
+    "throwing up",
+    "puking",
+    "sick to my stomach"
+   ]
+  },
+  "bowel_changes": {
+   "label": "Diarrhea, constipation, or bowel problems",
+   "category": "gut",
+   "synonyms": [
+    "diarrhea",
+    "constipation",
+    "loose stools",
+    "rectal pain"
+   ]
+  },
+  "gi_bleeding": {
+   "label": "Blood in vomit or stool",
+   "category": "gut",
+   "synonyms": [
+    "black stool",
+    "rectal bleeding",
+    "vomiting blood",
+    "bloody stool"
+   ]
+  },
+  "swallowed_foreign_body": {
+   "label": "Swallowed something that is stuck",
+   "category": "gut",
+   "synonyms": [
+    "swallowed object",
+    "choking"
+   ]
+  },
+  "chest_pain": {
+   "label": "Chest pain or pressure",
+   "category": "chest",
+   "synonyms": [
+    "chest tightness",
+    "heart pain",
+    "chest pressure"
+   ]
+  },
+  "chest_wall_pain": {
+   "label": "Rib or chest-wall pain",
+   "category": "chest",
+   "synonyms": [
+    "rib pain",
+    "sore ribs"
+   ]
+  },
+  "shortness_of_breath": {
+   "label": "Trouble breathing",
+   "category": "chest",
+   "synonyms": [
+    "short of breath",
+    "can't catch breath",
+    "difficulty breathing",
+    "breathless"
+   ]
+  },
+  "wheezing_asthma": {
+   "label": "Wheezing or asthma flare",
+   "category": "chest",
+   "synonyms": [
+    "asthma",
+    "wheeze"
+   ]
+  },
+  "cough": {
+   "label": "Cough",
+   "category": "chest",
+   "synonyms": []
+  },
+  "coughing_blood": {
+   "label": "Coughing up blood",
+   "category": "chest",
+   "synonyms": [
+    "hemoptysis",
+    "blood in phlegm"
+   ]
+  },
+  "cold_flu_sore_throat": {
+   "label": "Cold, flu, or sore throat",
+   "category": "head",
+   "synonyms": [
+    "runny nose",
+    "congestion",
+    "sinus",
+    "flu",
+    "stuffy nose"
+   ]
+  },
+  "fever_chills": {
+   "label": "Fever or chills",
+   "category": "gen",
+   "synonyms": [
+    "temperature",
+    "hot",
+    "shivering"
+   ]
+  },
+  "palpitations": {
+   "label": "Racing or irregular heartbeat",
+   "category": "heart",
+   "synonyms": [
+    "heart racing",
+    "palpitations",
+    "skipped beats",
+    "pounding heart"
+   ]
+  },
+  "dizziness": {
+   "label": "Dizziness or lightheadedness",
+   "category": "neuro",
+   "synonyms": [
+    "vertigo",
+    "lightheaded",
+    "spinning",
+    "woozy"
+   ]
+  },
+  "fainting": {
+   "label": "Fainting or nearly fainting",
+   "category": "neuro",
+   "synonyms": [
+    "passed out",
+    "blackout",
+    "syncope",
+    "nearly fainted"
+   ]
+  },
+  "headache": {
+   "label": "Headache or migraine",
+   "category": "head",
+   "synonyms": [
+    "migraine",
+    "head pain"
+   ]
+  },
+  "new_onset_headache": {
+   "label": "New or unusual headache",
+   "category": "head",
+   "synonyms": [
+    "different headache",
+    "first headache",
+    "sudden headache"
+   ]
+  },
+  "focal_weakness_numbness": {
+   "label": "Weakness or numbness in part of the body",
+   "category": "neuro",
+   "synonyms": [
+    "numb",
+    "tingling",
+    "arm weak",
+    "leg weak",
+    "pins and needles"
+   ]
+  },
+  "confusion_altered_mental": {
+   "label": "Confusion or unusual drowsiness",
+   "category": "neuro",
+   "synonyms": [
+    "confused",
+    "disoriented",
+    "very sleepy",
+    "hard to wake"
+   ]
+  },
+  "seizure": {
+   "label": "Seizure",
+   "category": "neuro",
+   "synonyms": [
+    "convulsion",
+    "fit"
+   ]
+  },
+  "fatigue_weakness": {
+   "label": "Fatigue or general weakness",
+   "category": "gen",
+   "synonyms": [
+    "tired",
+    "exhausted",
+    "no energy",
+    "weak"
+   ]
+  },
+  "body_aches": {
+   "label": "Body aches",
+   "category": "gen",
+   "synonyms": [
+    "muscle aches",
+    "achy"
+   ]
+  },
+  "vision_problems": {
+   "label": "Blurry or changed vision",
+   "category": "head",
+   "synonyms": [
+    "blurred vision",
+    "double vision",
+    "vision loss"
+   ]
+  },
+  "eye_problems": {
+   "label": "Eye pain, redness, or injury",
+   "category": "head",
+   "synonyms": [
+    "red eye",
+    "pink eye",
+    "eye pain",
+    "something in my eye"
+   ]
+  },
+  "ear_problems": {
+   "label": "Ear pain or ear problems",
+   "category": "head",
+   "synonyms": [
+    "earache",
+    "ear pain",
+    "ringing"
+   ]
+  },
+  "dental_pain": {
+   "label": "Tooth or mouth pain",
+   "category": "head",
+   "synonyms": [
+    "toothache",
+    "gum",
+    "dental"
+   ]
+  },
+  "mouth_face_swelling": {
+   "label": "Swelling of the face, lips, or mouth",
+   "category": "head",
+   "synonyms": [
+    "swollen lip",
+    "swollen face",
+    "swollen tongue"
+   ]
+  },
+  "facial_jaw_pain": {
+   "label": "Face or jaw pain",
+   "category": "head",
+   "synonyms": [
+    "jaw pain",
+    "cheek pain",
+    "facial pain"
+   ]
+  },
+  "neck_pain": {
+   "label": "Neck pain",
+   "category": "body",
+   "synonyms": [
+    "stiff neck",
+    "sore neck"
+   ]
+  },
+  "back_pain": {
+   "label": "Back pain",
+   "category": "body",
+   "synonyms": [
+    "lower back",
+    "sciatica",
+    "spine"
+   ]
+  },
+  "upper_limb_pain": {
+   "label": "Shoulder, arm, or hand pain",
+   "category": "body",
+   "synonyms": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hand pain",
+    "finger"
+   ]
+  },
+  "lower_limb_pain": {
+   "label": "Hip, leg, or foot pain",
+   "category": "body",
+   "synonyms": [
+    "hip",
+    "knee",
+    "ankle",
+    "foot pain",
+    "toe"
+   ]
+  },
+  "swelling_edema": {
+   "label": "Swelling in arms, legs, or joints",
+   "category": "heart",
+   "synonyms": [
+    "swollen leg",
+    "swollen ankle",
+    "edema",
+    "puffy"
+   ]
+  },
+  "breast_pain": {
+   "label": "Breast pain",
+   "category": "gu",
+   "synonyms": [
+    "breast"
+   ]
+  },
+  "limb_injury": {
+   "label": "Injury to an arm, leg, or joint",
+   "category": "body",
+   "synonyms": [
+    "sprain",
+    "twisted",
+    "broken bone",
+    "fracture",
+    "injured"
+   ]
+  },
+  "head_face_injury": {
+   "label": "Head or face injury",
+   "category": "head",
+   "synonyms": [
+    "hit my head",
+    "concussion",
+    "bumped head"
+   ]
+  },
+  "cuts_lacerations": {
+   "label": "Cut or wound",
+   "category": "skin",
+   "synonyms": [
+    "laceration",
+    "gash",
+    "bleeding cut"
+   ]
+  },
+  "fall": {
+   "label": "Fall",
+   "category": "body",
+   "synonyms": [
+    "fell",
+    "tripped",
+    "slipped"
+   ]
+  },
+  "vehicle_crash": {
+   "label": "Car or motorcycle crash",
+   "category": "body",
+   "synonyms": [
+    "accident",
+    "collision",
+    "car wreck"
+   ]
+  },
+  "burns": {
+   "label": "Burn",
+   "category": "skin",
+   "synonyms": [
+    "scald",
+    "burned"
+   ]
+  },
+  "bites_stings": {
+   "label": "Animal bite, insect bite, or tick",
+   "category": "skin",
+   "synonyms": [
+    "dog bite",
+    "spider",
+    "bee sting",
+    "tick"
+   ]
+  },
+  "infection_exposure": {
+   "label": "Possible exposure to an infection or STI",
+   "category": "gen",
+   "synonyms": [
+    "std",
+    "sti",
+    "exposed"
+   ]
+  },
+  "rash_skin": {
+   "label": "Rash or skin problem",
+   "category": "skin",
+   "synonyms": [
+    "itchy",
+    "hives",
+    "skin irritation"
+   ]
+  },
+  "skin_infection_lump": {
+   "label": "Skin infection, abscess, or lump",
+   "category": "skin",
+   "synonyms": [
+    "boil",
+    "abscess",
+    "cellulitis",
+    "lump",
+    "cyst"
+   ]
+  },
+  "allergic_reaction": {
+   "label": "Allergic reaction",
+   "category": "gen",
+   "synonyms": [
+    "allergy",
+    "hives",
+    "allergic"
+   ]
+  },
+  "bleeding_bruising": {
+   "label": "Bleeding, nosebleed, or easy bruising",
+   "category": "gen",
+   "synonyms": [
+    "nosebleed",
+    "bruise",
+    "bleeding"
+   ]
+  },
+  "urinary_symptoms": {
+   "label": "Urinary problems (burning, frequency, blood)",
+   "category": "gu",
+   "synonyms": [
+    "uti",
+    "burning pee",
+    "urine",
+    "bladder"
+   ]
+  },
+  "flank_pain": {
+   "label": "Side or flank pain",
+   "category": "gu",
+   "synonyms": [
+    "kidney pain",
+    "side pain"
+   ]
+  },
+  "testicular_pain": {
+   "label": "Testicle pain",
+   "category": "gu",
+   "synonyms": [
+    "testicle",
+    "scrotum",
+    "groin pain male"
+   ]
+  },
+  "genital_problems": {
+   "label": "Genital problem",
+   "category": "gu",
+   "synonyms": [
+    "penis",
+    "genital"
+   ]
+  },
+  "vaginal_symptoms": {
+   "label": "Vaginal discharge or pain",
+   "category": "gu",
+   "synonyms": [
+    "discharge",
+    "vaginal pain",
+    "yeast"
+   ]
+  },
+  "vaginal_bleeding": {
+   "label": "Vaginal bleeding",
+   "category": "gu",
+   "synonyms": [
+    "period",
+    "spotting",
+    "heavy period"
+   ]
+  },
+  "blood_sugar_problem": {
+   "label": "High or low blood sugar symptoms",
+   "category": "gen",
+   "synonyms": [
+    "diabetes",
+    "hypoglycemia",
+    "hyperglycemia",
+    "sugar"
+   ]
+  },
+  "dehydration": {
+   "label": "Dehydration",
+   "category": "gen",
+   "synonyms": [
+    "dry mouth",
+    "very thirsty",
+    "dehydrated"
+   ]
+  },
+  "anxiety_panic": {
+   "label": "Anxiety or panic",
+   "category": "mind",
+   "synonyms": [
+    "panic attack",
+    "anxious",
+    "worry"
+   ]
+  },
+  "low_mood": {
+   "label": "Depression or low mood",
+   "category": "mind",
+   "synonyms": [
+    "depressed",
+    "sad",
+    "hopeless"
+   ]
+  },
+  "agitation_psychosis": {
+   "label": "Agitation, hallucinations, or unusual thoughts",
+   "category": "mind",
+   "synonyms": [
+    "hallucinations",
+    "hearing voices",
+    "paranoid",
+    "agitated"
+   ]
+  },
+  "substance_use": {
+   "label": "Alcohol or drug problem",
+   "category": "mind",
+   "synonyms": [
+    "drinking",
+    "drugs",
+    "intoxicated",
+    "addiction"
+   ]
+  },
+  "generic_pain": {
+   "label": "Pain somewhere else",
+   "category": "gen",
+   "synonyms": [
+    "pain",
+    "hurts",
+    "sore"
+   ]
+  },
+  "post_surgical_problem": {
+   "label": "Problem after surgery",
+   "category": "gen",
+   "synonyms": [
+    "surgery",
+    "incision",
+    "post-op",
+    "stitches"
+   ]
+  }
+ }
+}
