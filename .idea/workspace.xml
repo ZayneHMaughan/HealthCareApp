@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/HealthCareApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/chainlit_app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/RAG.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/RAGTOOL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Rec_Sys.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/chainlit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/chainlit.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/database_tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/reqs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ZayneHMaughan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:ZayneHMaughan/HealthCareApp.git",
+    "accountId": "3b6453ef-e9af-42a3-953c-6bdf86983542"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -54,6 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python.dataset.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,

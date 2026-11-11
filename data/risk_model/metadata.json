@@ -1,0 +1,9 @@
+{
+  "trained_on": "yale ed admission dataset",
+  "target": "admission",
+  "sklearn": "1.9.0",
+  "dask": "2026.3.0",
+  "lightgbm": "3.2.0",
+  "auroc": 0.0,
+  "brier": 0.0
+}
