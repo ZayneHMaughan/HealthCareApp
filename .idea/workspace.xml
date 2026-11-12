@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/risk_model/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/risk_model/model.joblib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/risk_model/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/risk_model/thresholds.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach.egg-info/SOURCES.txt" afterDir="false" />
-    </list>
+    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="Day 2 commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,12 +84,21 @@
       <option name="project" value="LOCAL" />
       <updated>1794371393638</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Day 2 commit">
+      <option name="closed" value="true" />
+      <created>1794453555003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1794453555003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inital commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="inital commit" />
+    <MESSAGE value="Day 2 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 2 commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
