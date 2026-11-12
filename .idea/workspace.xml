@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="Day 2 commit" />
+    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="Day 2 commit">
+      <change beforePath="$PROJECT_DIR$/evals/reports/latest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/RAG.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/RAGTOOL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Rec_Sys.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/chainlit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/chainlit.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/database_tool.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/reqs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/top_level.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
