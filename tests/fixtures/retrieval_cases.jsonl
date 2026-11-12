@@ -1,0 +1,4 @@
+{"id":"chest","intake":{"age":50,"symptoms":["chest_pain"]},"expect_titles_any":["Chest Pain"],"forbid_titles":["Abdominal"]}
+{"id":"urgent_first_kind","intake":{"age":50,"symptoms":["chest_pain"]},"tier":"urgent","expect_first_kind":"seek_care"}
+{"id":"gap_is_reported","intake":{"age":30,"symptoms":["testicular_pain"]},"expect_uncovered":["testicular_pain"]}
+{"id":"deliberately_wrong_expectation","intake":{"age":30,"symptoms":["headache"]},"expect_titles_any":["Back Pain"]}

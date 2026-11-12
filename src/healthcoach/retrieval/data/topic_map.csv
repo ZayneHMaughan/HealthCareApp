@@ -1,0 +1,54 @@
+group,title,status
+abdominal_pain,Abdominal Pain,unverified
+nausea_vomiting,Nausea and Vomiting,unverified
+bowel_changes,Diarrhea,unverified
+bowel_changes,Constipation,unverified
+gi_bleeding,Gastrointestinal Bleeding,unverified
+chest_pain,Chest Pain,unverified
+chest_pain,Heart Attack,unverified
+shortness_of_breath,Breathing Problems,unverified
+wheezing_asthma,Asthma,unverified
+cough,Cough,unverified
+cold_flu_sore_throat,Common Cold,unverified
+cold_flu_sore_throat,Sore Throat,unverified
+cold_flu_sore_throat,Flu,unverified
+fever_chills,Fever,unverified
+palpitations,Heart Rhythm Disorders,unverified
+dizziness,Dizziness and Vertigo,unverified
+fainting,Fainting,unverified
+headache,Headache,unverified
+headache,Migraine,unverified
+new_onset_headache,Headache,unverified
+focal_weakness_numbness,Stroke,unverified
+confusion_altered_mental,Confusion,unverified
+seizure,Seizures,unverified
+fatigue_weakness,Fatigue,unverified
+vision_problems,Vision Problems,unverified
+eye_problems,Eye Injuries,unverified
+eye_problems,Pink Eye,unverified
+ear_problems,Earache,unverified
+ear_problems,Ear Infections,unverified
+dental_pain,Toothache,unverified
+neck_pain,Neck Injuries and Disorders,unverified
+back_pain,Back Pain,unverified
+swelling_edema,Edema,unverified
+limb_injury,Sprains and Strains,unverified
+limb_injury,Fractures,unverified
+head_face_injury,Head Injuries,unverified
+cuts_lacerations,Wounds and Injuries,unverified
+fall,Falls,unverified
+burns,Burns,unverified
+bites_stings,Bites and Stings,unverified
+rash_skin,Rashes,unverified
+skin_infection_lump,Skin Infections,unverified
+allergic_reaction,Allergy,unverified
+bleeding_bruising,Bleeding,unverified
+bleeding_bruising,Nosebleeds,unverified
+urinary_symptoms,Urinary Tract Infections,unverified
+dehydration,Dehydration,unverified
+anxiety_panic,Anxiety,unverified
+anxiety_panic,Panic Disorder,unverified
+low_mood,Depression,unverified
+vaginal_bleeding,Vaginal Bleeding,unverified
+testicular_pain,Testicular Disorders,unverified
+blood_sugar_problem,Diabetes,unverified

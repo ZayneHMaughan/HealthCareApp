@@ -1,23 +1,47 @@
-The goal of this project is to create a healthcare app whose goal is the following: 
- 
-$1.$ Connect rural individuals with an app that connects symptoms with a treatment option
+# healthcoach
 
-$2.$ Passes the individual to a doctor's case-load allowing for prescriptions/complete case management to be done
+Desktop, on-device health guidance tool. Not a diagnostic device. Rules and thresholds are drafts for clinician review.
 
-$3.$ Recommends various other treatments for symptoms and lingering issues that might help
+## Layout
+```
+src/healthcoach/
+  schema.py      Intake, Vitals, Tier
+  rules.py       hard-coded red-flag layer (runs first, can only raise urgency)
+  risk.py        loads models/risk_model/ bundle, returns score + tier
+  safety.py      post-checks on LLM output
+  pipeline.py    rules -> classifier -> retrieval + LLM -> safety check
+  resources.py   region-specific emergency/crisis contacts
+  intake/
+    flow.py      data-driven question flow + IntakeSession (UI-agnostic)
+    cli.py       terminal demo: python -m healthcoach.intake.cli
+    data/        questions.json (screener, follow-ups, context, readings),
+                 symptoms.json (patient-facing labels/synonyms), cc_symptom_mapping.csv
+evals/
+  cases/*.jsonl  test cases (seed set; grow to 100+, clinician-reviewed)
+  run_evals.py   harness, exits 1 on any under-triage
+tests/           unit tests
+```
+Planned (not included): `training/` (feature build + classifier), `finetune/` (synthetic data + LoRA),
+`retrieval/` (vetted-source index), `app/` (desktop UI), `models/` (git-ignored artifacts).
 
+## Quickstart
+```
+pip install -e ".[dev]"
+python evals/run_evals.py
+pytest
+```
 
-Steps needed to accomplish:
+## Intake flow
+Screener (emergencies first) -> age/sex -> symptoms -> severity/duration -> red-flag follow-ups ->
+context -> optional readings -> optional free text. Rules re-run after every answer; once they
+reach EMERGENCY the flow stops asking. "Not sure" answers are treated conservatively on
+high-stakes questions and recorded in `IntakeResult.assumptions`.
+Edit `questions.json` / `symptoms.json` (no code changes needed) and run the tests: they check that
+every modifier the rules read can be collected, that no question is dead, and that every seed eval case
+can be expressed through the flow.
 
-1. Collect the data
-   2. I have collected a database but I will see if it works.
-   3. issues facing database:
-      4. Does not exactly fit this situation it is based on ER visits
-      5. Due to this I need to compress the columns and make it more relevant
-      6. One idea of columns to get rid of is the _last columns
-      7. other colummsn are those with _min and _max _median _count meds_
-      8. Columns to keep would be columns that better fit to how a patient is currently feeling
-2. Create the database including patients and doctors with different privileges 
-3. Create the app background 
-   1. If patient logs in, have them input their symptoms. This will be added to a table containing visits
-   2. If doctor logs in, they should see a place to manage their cases
+## Rules of the road
+- Final tier = max(rules, classifier). The LLM can explain a tier but never lower it.
+- Emergency, crisis, and out-of-scope responses never wait on the LLM.
+- Every rule change must keep `python evals/run_evals.py` passing; add a case for each new rule.
+- Never commit the ER dataset or patient-level derivatives.

@@ -1,0 +1,9 @@
+{"id":"chest_pain","intake":{"age":50,"symptoms":["chest_pain"]},"expect_titles_any":["Chest Pain","Heart Attack"]}
+{"id":"chest_pain_urgent_leads_with_seek_care","intake":{"age":50,"symptoms":["chest_pain"]},"tier":"urgent","expect_first_kind":"seek_care"}
+{"id":"abdominal_pain","intake":{"age":30,"symptoms":["abdominal_pain"]},"expect_titles_any":["Abdominal Pain"],"forbid_titles":["Chest Pain"]}
+{"id":"headache","intake":{"age":30,"symptoms":["headache"]},"expect_titles_any":["Headache"]}
+{"id":"back_pain","intake":{"age":45,"symptoms":["back_pain"]},"expect_titles_any":["Back Pain"]}
+{"id":"fever","intake":{"age":30,"symptoms":["fever_chills"]},"expect_titles_any":["Fever"]}
+{"id":"dizziness","intake":{"age":60,"symptoms":["dizziness"]},"expect_titles_any":["Dizziness"]}
+{"id":"dehydration","intake":{"age":30,"symptoms":["dehydration"]},"expect_titles_any":["Dehydration"]}
+{"id":"two_symptoms_both_covered","intake":{"age":40,"symptoms":["chest_pain","abdominal_pain"]},"expect_uncovered":[]}

@@ -1,3 +1,4 @@
+LICENSE
 pyproject.toml
 src/healthcoach/__init__.py
 src/healthcoach/pipeline.py
@@ -10,3 +11,6 @@ src/healthcoach.egg-info/PKG-INFO
 src/healthcoach.egg-info/SOURCES.txt
 src/healthcoach.egg-info/dependency_links.txt
 src/healthcoach.egg-info/top_level.txt
+src/healthcoach/intake/__init__.py
+src/healthcoach/intake/cli.py
+src/healthcoach/intake/flow.py

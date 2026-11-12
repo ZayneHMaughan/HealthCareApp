@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<health-topics total="9" date-generated="11/11/2026 06:00:00">
+<health-topic title="Chest Pain" url="https://example.test/chestpain.html" id="9001" language="English" date-created="01/01/2003">
+  <also-called>Chest discomfort</also-called>
+  <full-summary>&lt;p&gt;SYNTHETIC TEST TEXT. Chest pain has many possible causes. Some are mild, such as muscle strain or heartburn, and some are serious.&lt;/p&gt; &lt;p&gt;Features that can accompany chest pain include&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Pain spreading to the arm or jaw&lt;/li&gt; &lt;li&gt;Sweating&lt;/li&gt; &lt;/ul&gt;</full-summary>
+  <site title="THIRD PARTY SITE RECORD" url="https://example.test/site"><information-category>Start Here</information-category><organization>Some Org</organization></site>
+</health-topic>
+<health-topic title="Heart Attack" url="https://example.test/heartattack.html" id="9007" language="English" date-created="01/01/2003">
+  <also-called>Myocardial infarction</also-called>
+  <full-summary>&lt;p&gt;SYNTHETIC TEST TEXT. A heart attack happens when blood flow to the heart is blocked.&lt;/p&gt; &lt;p&gt;Call 911 if you think someone may be having a heart attack.&lt;/p&gt;</full-summary>
+</health-topic>
+<health-topic title="Abdominal Pain" url="https://example.test/abdominalpain.html" id="9002" language="English" date-created="01/01/2003">
+  <also-called>Bellyache</also-called>
+  <also-called>Stomachache</also-called>
+  <full-summary><p>SYNTHETIC TEST TEXT. Abdominal pain is felt anywhere between the chest and the groin. Causes range from gas to infections.</p><p>See your health care provider if the pain is severe or does not go away.</p></full-summary>
+</health-topic>
+<health-topic title="Headache" url="https://example.test/headache.html" id="9003" language="English" date-created="01/01/2003">
+  <full-summary>&lt;p&gt;SYNTHETIC TEST TEXT. A headache is pain in the head or face. Many headaches are tension headaches.&lt;/p&gt;</full-summary>
+</health-topic>
+<health-topic title="Dolor abdominal" url="https://example.test/es/dolor.html" id="9004" language="Spanish" date-created="01/01/2003">
+  <full-summary>&lt;p&gt;TEXTO DE PRUEBA SINTETICO. El dolor abdominal tiene muchas causas.&lt;/p&gt;</full-summary>
+</health-topic>
+<health-topic title="Encyclopedia Style Topic" url="https://example.test/ency.html" id="9005" language="English" date-created="01/01/2003">
+  <full-summary>&lt;p&gt;SYNTHETIC TEST TEXT with a copyright marker. © A.D.A.M., Inc.&lt;/p&gt;</full-summary>
+</health-topic>
+<health-topic title="Dehydration" url="https://example.test/dehydration.html" id="9006" language="English" date-created="01/01/2003">
+  <full-summary>&lt;p&gt;SYNTHETIC TEST TEXT. Dehydration means your body does not have enough fluid. Fluids and rest are the usual approach.&lt;/p&gt;</full-summary>
+</health-topic>
+<health-topic title="Knee Pain" url="https://example.test/knee.html" id="9008" language="English" date-created="01/01/2003">
+  <full-summary>&lt;p&gt;SYNTHETIC TEST TEXT. Pain, pain, and more pain in the knee. Knee pain can follow a pain-causing injury.&lt;/p&gt;</full-summary>
+</health-topic>
+</health-topics>
