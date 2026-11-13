@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="Day 2 commit">
-      <change beforePath="$PROJECT_DIR$/evals/reports/latest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/RAG.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/RAGTOOL.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Rec_Sys.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/chainlit.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/chainlit.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/database_tool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/reqs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach.egg-info/top_level.txt" beforeDir="false" />
+    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="remove some files">
+      <change afterPath="$PROJECT_DIR$/src/healthcoach/warning_signs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_finetune.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/models/test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach/retrieval/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/retrieval/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach/retrieval/data/mplus_topics_2026-11-11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/mplus_topics_2026-11-11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach/safety.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/safety.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +67,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -106,24 +105,33 @@
       <option name="project" value="LOCAL" />
       <updated>1794453555003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="remove some files">
+      <option name="closed" value="true" />
+      <created>1794454498274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1794454498274</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inital commit" />
     <MESSAGE value="Day 2 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 2 commit" />
+    <MESSAGE value="remove some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove some files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>file://$PROJECT_DIR$/data/test.ipynb</url>
+          <url>file://$PROJECT_DIR$/models/test.ipynb</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>file://$PROJECT_DIR$/data/test.ipynb</url>
+          <url>file://$PROJECT_DIR$/models/test.ipynb</url>
           <line>13</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>

@@ -2,3 +2,4 @@ evals/reports/
 __pycache__/
 *.egg-info/
 modules/
+data/

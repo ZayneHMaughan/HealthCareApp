@@ -12,11 +12,28 @@ from .ingest import load_topic_map, parse_curated_dir, parse_medlineplus
 from .retriever import Retriever, coverage_report
 
 DEFAULT_MAP = Path(__file__).parent / "data" / "topic_map.csv"
+DEFAULT_DATA_DIR = Path("data/medlineplus")   # relative to where you run the command (the project root)
+
+
+def resolve_source(arg: str) -> Path:
+    """Accept a file, or a directory (newest mplus_topics*.xml wins; the dated filenames sort chronologically)."""
+    p = Path(arg).expanduser()
+    if p.is_file():
+        return p
+    if p.is_dir():
+        files = sorted(p.glob("mplus_topics*.xml")) or sorted(p.glob("*.xml"))
+        if files:
+            return files[-1]
+        raise SystemExit(f"No .xml files found in {p.resolve()}")
+    raise SystemExit(f"MedlinePlus file not found: {p.resolve()}\n"
+                     f"Relative paths are resolved from the current directory ({Path.cwd()}). "
+                     f"Put the file in {DEFAULT_DATA_DIR}/ and run from the project root, or pass an absolute path.")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--medlineplus", help="MedlinePlus Health Topic XML file (from medlineplus.gov/xml.html)")
+    ap.add_argument("--medlineplus", help="MedlinePlus Health Topic XML file, or a directory containing it "
+                    f"(default: {DEFAULT_DATA_DIR}/ if it exists). Download from medlineplus.gov/xml.html")
     ap.add_argument("--curated", help="directory of reviewed Markdown files")
     ap.add_argument("--topic-map", default=str(DEFAULT_MAP))
     ap.add_argument("--embedder", default="none", help="none | hashing | st:<model> | llama:<path.gguf>")
@@ -25,8 +42,12 @@ def main() -> None:
 
     tmap = load_topic_map(a.topic_map)
     chunks = []
+    if not a.medlineplus and DEFAULT_DATA_DIR.is_dir() and any(DEFAULT_DATA_DIR.glob("*.xml")):
+        a.medlineplus = str(DEFAULT_DATA_DIR)
     if a.medlineplus:
-        c, rep = parse_medlineplus(a.medlineplus, tmap)
+        src = resolve_source(a.medlineplus)
+        print(f"Using {src.resolve()}")
+        c, rep = parse_medlineplus(src, tmap)
         chunks += c
         print(f"MedlinePlus: {rep['n_topics']} topics -> {rep['n_chunks']} chunks (file date {rep['source_date']})")
         print(f"  skipped: {rep['skipped_non_english']} non-English, {rep['skipped_no_summary']} without summary, "

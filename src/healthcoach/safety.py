@@ -10,9 +10,21 @@ DIAGNOSTIC = [r"\byou (definitely |probably |likely )?have\b", r"\byou('re| are)
               r"\bthis is (definitely |probably )?(a|an) \w+ (infection|attack|disease)\b"]
 DOSING = [r"\b\d+(\.\d+)?\s?(mg|mcg|ml|iu)\b", r"\btake \d+\b"]
 REASSURING = [r"nothing to worry", r"probably nothing", r"no need to (see|go|seek)", r"not serious", r"nothing serious"]
+_CONDITIONAL = re.compile(r"\b(if|when|whether|unless|should) you\b", re.I)
 
 
-def post_check(out: dict, tier: Tier) -> list[str]:
+def _statements(out: dict) -> str:
+    """Declarative sentences from considerations and when_to_seek_care. Questions ("Do you have a fever?")
+    and conditionals ("Call 911 if you have trouble breathing") are not diagnoses and are skipped."""
+    parts = [s for s in (out.get("considerations") or []) if isinstance(s, str)]
+    if isinstance(out.get("when_to_seek_care"), str):
+        parts.append(out["when_to_seek_care"])
+    sents = [s.strip() for p in parts for s in re.split(r"(?<=[.!?])\s+", p)]
+    return " ".join(s for s in sents if s and not s.endswith("?") and not _CONDITIONAL.search(s)).lower()
+
+def post_check(out: dict, tier: Tier, allowed_sources: set[str] | None = None) -> list[str]:
+    """allowed_sources: ids of the passages the model was given. When provided, the output must cite
+    at least one and may cite only ids it was given."""
     v: list[str] = []
     missing = REQUIRED_KEYS - set(out)
     if missing:
@@ -23,9 +35,18 @@ def post_check(out: dict, tier: Tier) -> list[str]:
             v.append(f"urgency softened: said {said.name}, required {tier.name}")
     except KeyError:
         v.append(f"invalid urgency value: {out.get('urgency')!r}")
+    if allowed_sources is not None:
+        cited = out.get("sources")
+        if not isinstance(cited, list) or not cited:
+            v.append("no sources cited")
+        else:
+            bad = [s for s in cited if s not in allowed_sources]
+            if bad:
+                v.append(f"cites sources it was not given: {bad}")
     text = json.dumps(out).lower()
+    statements = _statements(out)
     for pat in DIAGNOSTIC:
-        if re.search(pat, text):
+        if re.search(pat, statements):
             v.append(f"diagnostic language: {pat}")
     for pat in DOSING:
         if re.search(pat, text):
