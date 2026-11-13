@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "built_at": "2026-11-13T03:05:06+00:00",
+  "n_chunks": 3123,
+  "embedder": null,
+  "dim": null,
+  "chunks_sha256": "84d223c8c47b6bedd22ac738b2c0963f28f9ad4a25f8fb8287bda90a8541c363",
+  "sources": {
+    "MedlinePlus": {
+      "n_chunks": 3123,
+      "source_date": "2026-11-11",
+      "license": "US government work (public domain); health topic summaries only",
+      "attribution": "Source: MedlinePlus, National Library of Medicine"
+    }
+  }
+}
