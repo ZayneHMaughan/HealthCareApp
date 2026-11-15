@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="remove some files">
-      <change afterPath="$PROJECT_DIR$/src/healthcoach/warning_signs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_finetune.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/models/test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach/retrieval/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/retrieval/build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach/retrieval/data/mplus_topics_2026-11-11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/mplus_topics_2026-11-11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach/safety.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/safety.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/chainlit_app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mplus_topics_2026-11-11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach/finetune/build_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/finetune/build_dataset.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,28 +49,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.dataset.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.dataset.executor": "Run",
+    "Python.python -m healthcoach.finetune.train_mlx --model <quantized 4-bit MLX instruct model, ~1-1.5B> --data data/ft --work models/mlx_run --smoke.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/medlineplus" />
       <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="pip install &quot;mlx-lm[train]&quot;            # training/fusing" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="python -m healthcoach.finetune.train_mlx --model &lt;quantized 4-bit MLX instruct model, ~1-1.5B&gt; --data data/ft --work models/mlx_run --smoke" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HealthCareApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="healthcoach.finetune.train_mlx" />
+      <option name="PARAMETERS" value="--model &lt;quantized 4-bit MLX instruct model, ~1-1.5B&gt; --data data/ft --work models/mlx_run --smoke" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.python -m healthcoach.finetune.train_mlx --model &lt;quantized 4-bit MLX instruct model, ~1-1.5B&gt; --data data/ft --work models/mlx_run --smoke" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -113,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794454498274</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="remove some files">
+      <option name="closed" value="true" />
+      <created>1794539350379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1794539350379</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

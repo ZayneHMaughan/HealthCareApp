@@ -35,10 +35,11 @@ def _signature(intake, category: str) -> str:
 
 def build(index_dir: str, out_dir: str, n: int = 3000, seed: int = 7, embedder: str = "none",
           allow_synthetic: bool = False, max_tokens: int = 2400, p_mod: float = 0.15,
-          quotas: dict | None = None, retriever: Retriever | None = None) -> dict:
+          quotas: dict | None = None, retriever: Retriever | None = None, budget_tokens: int | None = None) -> dict:
     rng = random.Random(seed)
     if retriever is None:
-        retriever = Retriever(Index.load(index_dir, build_embedder(embedder)))
+        kw = {"budget_tokens": budget_tokens} if budget_tokens else {}
+        retriever = Retriever(Index.load(index_dir, build_embedder(embedder)), **kw)
     idx = retriever.index
     if not allow_synthetic and any("SYNTHETIC TEST TEXT" in c.text for c in idx.chunks):
         raise SystemExit("Index contains synthetic test fixtures. Build the index from real sources, "
@@ -121,6 +122,7 @@ def build(index_dir: str, out_dir: str, n: int = 3000, seed: int = 7, embedder: 
         "symptom_groups_with_corpus_support": sorted(covered),
         "symptom_groups_without_support": sorted(set(retriever.labels) - covered),
         "max_prompt_tokens": max((r["meta"]["prompt_tokens"] for r in rows), default=0),
+        "retrieval_budget_tokens": retriever.budget,   # inference MUST use the same budget
         "skipped": dict(stats), "index_manifest": idx.manifest,
         "provenance": "Synthetic intakes sampled from the intake schema; no ER-dataset rows used.",
     }
@@ -136,9 +138,13 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=3000)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--p-mod", type=float, default=0.15, help="chance each applicable red-flag modifier is set")
+    ap.add_argument("--budget-tokens", type=int, help="retrieval token budget (default 1100). Lower = shorter "
+                    "sequences, needed for small-memory training; use the same value at inference")
+    ap.add_argument("--max-tokens", type=int, default=2400, help="drop examples longer than this (estimated tokens)")
     ap.add_argument("--allow-synthetic", action="store_true")
     a = ap.parse_args()
-    info = build(a.index, a.out, a.n, a.seed, a.embedder, a.allow_synthetic, p_mod=a.p_mod)
+    info = build(a.index, a.out, a.n, a.seed, a.embedder, a.allow_synthetic, max_tokens=a.max_tokens,
+                 p_mod=a.p_mod, budget_tokens=a.budget_tokens)
     print(f"{info['n_examples']} examples  split={info['by_split']}  tiers={info['by_tier']}")
     print(f"categories={info['by_category']}")
     print(f"symptom groups without corpus support ({len(info['symptom_groups_without_support'])}): "
