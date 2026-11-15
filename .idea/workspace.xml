@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="remove some files">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chainlit_app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataset.py" beforeDir="false" />
+    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="Adjust some files">
       <change beforePath="$PROJECT_DIR$/data/mplus_topics_2026-11-11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthcoach/finetune/build_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/finetune/build_dataset.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1794539350379</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adjust some files">
+      <option name="closed" value="true" />
+      <created>1794757662408</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1794757662408</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inital commit" />
     <MESSAGE value="Day 2 commit" />
     <MESSAGE value="remove some files" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove some files" />
+    <MESSAGE value="Adjust some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust some files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

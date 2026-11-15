@@ -4,5 +4,6 @@ __pycache__/
 modules/
 data/
 models/kb
-
+models/mlx_run
+models/
 data/file
