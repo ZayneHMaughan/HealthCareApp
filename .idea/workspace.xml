@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="Adjust some files">
-      <change beforePath="$PROJECT_DIR$/data/mplus_topics_2026-11-11.xml" beforeDir="false" />
+    <list default="true" id="64a7f0e9-769c-4b29-903c-46133b297a23" name="Changes" comment="Add more files">
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach/finetune/eval_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/finetune/eval_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthcoach/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/healthcoach/llm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_retrieval.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_retrieval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_rules.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +59,20 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/zaynemaughan/Documents/Grad School/personal_projects/HealthCareApp",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/healthcoach/finetune" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/data/medlineplus" />
       <recent name="$PROJECT_DIR$/models" />
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -164,7 +172,8 @@
     <MESSAGE value="Day 2 commit" />
     <MESSAGE value="remove some files" />
     <MESSAGE value="Adjust some files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust some files" />
+    <MESSAGE value="Add more files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

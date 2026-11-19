@@ -56,6 +56,10 @@ class LlamaCppLLM:
 
 _default: LlamaCppLLM | None = None
 
+def default_gpu_layers() -> int:
+    """-1 (all layers on the GPU via Metal) on Apple Silicon, else 0. Override with $HEALTHCOACH_GPU_LAYERS."""
+    apple = sys.platform == "darwin" and platform.machine() == "arm64"
+    return int(os.environ.get("HEALTHCOACH_GPU_LAYERS", "-1" if apple else "0"))
 
 def default_llm(prompt: str) -> str:
     """For `run_evals.py --llm healthcoach.llm:default_llm`; model path comes from $HEALTHCOACH_GGUF."""

@@ -69,6 +69,16 @@ python evals/run_evals.py --index models/kb --llm mymod:generate     # LLM runs 
   monographs, or images (copyrighted). Re-read https://medlineplus.gov/about/using/usingcontent/ before shipping.
 - Refresh the corpus periodically (`Index.stale()`); MedlinePlus republishes daily.
 
+## Run the app (local web page, http://localhost:8888)
+```
+python -m healthcoach.app --index models/kb --gguf models/gguf/tuned-q4_k_m.gguf --open
+python -m healthcoach.app            # rules + standard messages only; works before you have a model or knowledge base
+```
+Optional: `--risk-model models/risk_model`, `--port 9000` (8888 is also Jupyter's default), `--budget-tokens N`
+(read automatically from `data/ft/stats.json` if present; must match training). Binds to localhost only.
+Answers live in memory for the session only (30 min idle timeout) and are never written to disk or logged.
+Front end: `src/healthcoach/app/static/` (plain HTML/CSS/JS, no external resources, text inserted via textContent only).
+
 ## Fine-tuning data
 ```
 python -m healthcoach.finetune.build_dataset --index models/kb --out data/ft --n 3000 --seed 7
@@ -96,9 +106,18 @@ python -m healthcoach.finetune.build_dataset --index models/kb --out data/ft --n
 python -m healthcoach.finetune.train_mlx --model <quantized 4-bit MLX instruct model, ~1-1.5B> --data data/ft --work models/mlx_run --smoke
 # 3. full run (add --dry-run to see the exact mlx-lm command)
 python -m healthcoach.finetune.train_mlx --model <same> --data data/ft --work models/mlx_run
-# 4. fuse into the UNQUANTIZED original model, then convert + quantize with llama.cpp (commands are printed)
+# 4. fuse into the UNQUANTIZED original model, then convert + quantize with llama.cpp (commands are printed).
+#    Find the original id on the MLX model's Hugging Face page: README says "converted to MLX format from <id>".
+#    e.g. mlx-community/Llama-3.2-1B-Instruct-4bit -> meta-llama/Llama-3.2-1B-Instruct (gated: accept the license, `huggingface-cli login`)
 python -m healthcoach.finetune.fuse_mlx --base-model <original fp16 HF id> --adapters models/mlx_run/adapters --out models/fused_hf
-# 5. evaluate the quantized GGUF you will ship, against the un-tuned baseline (see below)
+# 5. GGUF: one-time llama.cpp setup (use a SEPARATE venv for the converter's torch/transformers requirements)
+git clone https://github.com/ggml-org/llama.cpp ~/llama.cpp
+cmake -S ~/llama.cpp -B ~/llama.cpp/build -DGGML_METAL=ON && cmake --build ~/llama.cpp/build --config Release -j 8
+python3 -m venv ~/convert-venv && ~/convert-venv/bin/pip install -r ~/llama.cpp/requirements.txt
+python -m healthcoach.finetune.make_gguf --fused models/fused_hf --llama-cpp ~/llama.cpp --out models/gguf --name tuned \
+    --convert-python ~/convert-venv/bin/python
+# baseline GGUF without converting: hf download unsloth/Llama-3.2-1B-Instruct-GGUF Llama-3.2-1B-Instruct-Q4_K_M.gguf --local-dir models/gguf
+# 6. evaluate the quantized GGUF you will ship, against the un-tuned baseline (see below)
 ```
 Out of memory? In order: `--batch-size 1`, `--num-layers 4`, lower `--max-seq-length` and rebuild data with a smaller
 `--budget-tokens`, a smaller model, close other apps.

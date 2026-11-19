@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/data/ft" />
       <excludeFolder url="file://$MODULE_DIR$/data/medlineplus" />
       <excludeFolder url="file://$MODULE_DIR$/evals/reports" />
+      <excludeFolder url="file://$MODULE_DIR$/models/fused_hf" />
+      <excludeFolder url="file://$MODULE_DIR$/models/mlx_run" />
       <excludeFolder url="file://$MODULE_DIR$/models/mlx_run/data" />
       <excludeFolder url="file://$MODULE_DIR$/modules" />
       <excludeFolder url="file://$MODULE_DIR$/src/healthcoach.egg-info" />

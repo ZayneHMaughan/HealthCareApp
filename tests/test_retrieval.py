@@ -210,3 +210,17 @@ def test_retrieval_harness_passes_good_cases_and_flags_bad_ones():
     rows = {r["id"]: r for r in mod.run_cases(Retriever(index()), cases)}
     assert not rows["chest"]["problems"] and not rows["urgent_first_kind"]["problems"] and not rows["gap_is_reported"]["problems"]
     assert rows["deliberately_wrong_expectation"]["problems"]
+
+
+def test_build_resolves_directories_and_explains_missing_files(tmp_path):
+    from healthcoach.retrieval.build import resolve_source
+    (tmp_path / "mplus_topics_2026-01-05.xml").write_text("<x/>")
+    (tmp_path / "mplus_topics_2026-11-11.xml").write_text("<x/>")
+    assert resolve_source(str(tmp_path)).name == "mplus_topics_2026-11-11.xml"       # newest wins
+    assert resolve_source(str(tmp_path / "mplus_topics_2026-01-05.xml")).name.endswith("01-05.xml")
+    try:
+        resolve_source(str(tmp_path / "nope.xml"))
+    except SystemExit as e:
+        assert "current directory" in str(e) and "data/medlineplus" in str(e)
+    else:
+        raise AssertionError("should have exited")
